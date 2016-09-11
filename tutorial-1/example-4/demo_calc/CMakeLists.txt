@@ -1,0 +1,5 @@
+add_library(demo_library calculator_trivial.cpp)
+target_include_directories(demo_library PUBLIC ${demo_calculator_SOURCE_DIR}/include)
+
+add_executable(demo_executable demo_trivial_calcl.cpp)
+target_link_libraries(demo_executable LINK_PUBLIC demo_library)
